@@ -1,0 +1,11 @@
+node_modules/
+/dist
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Editor & OS
+.DS_Store
+.idea
+*~

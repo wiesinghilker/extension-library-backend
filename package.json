@@ -1,0 +1,59 @@
+{
+  "name": "@wiesinghilker/extension-lib-backend",
+  "type": "module",
+  "packageManager": "pnpm@10.27.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wiesinghilker/extension-library-backend.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint --fix 'src/**/*.ts' --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write src/**/* eslint.config.mjs",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "@mittwald/api-client": "^4",
+    "express": "^5",
+    "mongodb": "^7",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@mittwald/api-client": "^4.296.0",
+    "@mittwald/ext-bridge": "^0.2.0-alpha.665",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.2",
+    "eslint": "^9.28.0",
+    "express": "^5.2.1",
+    "globals": "^17.3.0",
+    "mongodb": "^7.1.0",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0",
+    "zod": "^4.3.6"
+  },
+  "dependencies": {
+    "@mittwald/ext-bridge": "^0.2.0-alpha.665",
+    "@noble/ed25519": "^3.0.0",
+    "node-ssh": "^13.2.1",
+    "pino": "^10.0.0",
+    "pino-http": "^11.0.0",
+    "pino-pretty": "^13.1.3"
+  }
+}
