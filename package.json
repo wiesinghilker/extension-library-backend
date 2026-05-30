@@ -31,12 +31,12 @@
     "zod": "^4"
   },
   "devDependencies": {
-    "@eslint/js": "^9.28.0",
+    "@eslint/js": "^10.0.1",
     "@mittwald/api-client": "^4.296.0",
     "@mittwald/ext-bridge": "^0.2.0-alpha.665",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
-    "eslint": "^9.28.0",
+    "eslint": "^10.4.0",
     "express": "^5.2.1",
     "globals": "^17.6.0",
     "mongodb": "^7.2.0",
@@ -44,7 +44,7 @@
     "ts-node": "^10.9.2",
     "tsup": "^8.5.1",
     "tsx": "^4.22.3",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.60.0",
     "zod": "^4.4.3"
   },

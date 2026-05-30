@@ -41,6 +41,7 @@ export class FileHandler {
           });
           throw new Error(
             `Failed to create directory ${directory}: ${error instanceof Error ? error.message : String(error)}`,
+            { cause: error },
           );
         }
       }
@@ -59,6 +60,7 @@ export class FileHandler {
         });
         throw new Error(
           `Failed to write file ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+          { cause: error },
         );
       }
 
@@ -82,6 +84,7 @@ export class FileHandler {
         });
         throw new Error(
           `Failed to verify file ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+          { cause: error },
         );
       }
 
@@ -102,6 +105,7 @@ export class FileHandler {
       });
       throw new Error(
         `FileHandler error: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -119,6 +123,7 @@ export class FileHandler {
       } catch (error) {
         throw new Error(
           `Failed to append to file ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+          { cause: error },
         );
       }
     } catch (error) {
@@ -127,6 +132,7 @@ export class FileHandler {
       }
       throw new Error(
         `FileHandler error: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -151,6 +157,7 @@ export class FileHandler {
         this.logger.logError(error, "Failed to delete file", { filePath });
         throw new Error(
           `Failed to delete file ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+          { cause: error },
         );
       }
     } catch (error) {
@@ -165,6 +172,7 @@ export class FileHandler {
       });
       throw new Error(
         `FileHandler error: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -197,6 +205,7 @@ export class FileHandler {
       });
       throw new Error(
         `FileHandler error checking file existence: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -230,6 +239,7 @@ export class FileHandler {
       });
       throw new Error(
         `FileHandler error reading file: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -244,6 +254,7 @@ export class FileHandler {
       } catch (error) {
         throw new Error(
           `Failed to create directory ${dirPath}: ${error instanceof Error ? error.message : String(error)}`,
+          { cause: error },
         );
       }
     } catch (error) {
@@ -252,6 +263,7 @@ export class FileHandler {
       }
       throw new Error(
         `FileHandler error creating directory: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -273,6 +285,7 @@ export class FileHandler {
       }
       throw new Error(
         `FileHandler error listing directory: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -290,6 +303,7 @@ export class FileHandler {
         } catch (error) {
           throw new Error(
             `Failed to create directory ${directory}: ${error instanceof Error ? error.message : String(error)}`,
+            { cause: error },
           );
         }
       }
@@ -301,6 +315,7 @@ export class FileHandler {
       } catch (error) {
         throw new Error(
           `Failed to touch file ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+          { cause: error },
         );
       }
     } catch (error) {
@@ -309,6 +324,7 @@ export class FileHandler {
       }
       throw new Error(
         `FileHandler error touching file: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -327,6 +343,7 @@ export class FileHandler {
       } catch (error) {
         throw new Error(
           `Failed to change permissions for ${filePath} to ${permissions}: ${error instanceof Error ? error.message : String(error)}`,
+          { cause: error },
         );
       }
     } catch (error) {
@@ -335,6 +352,7 @@ export class FileHandler {
       }
       throw new Error(
         `FileHandler error changing permissions: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -345,6 +363,7 @@ export class FileHandler {
     } catch (error) {
       throw new Error(
         `Failed to lock file ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
@@ -355,6 +374,7 @@ export class FileHandler {
     } catch (error) {
       throw new Error(
         `Failed to unlock file ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       );
     }
   }
