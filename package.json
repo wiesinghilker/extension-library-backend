@@ -1,7 +1,7 @@
 {
   "name": "@wiesinghilker/extension-lib-backend",
   "type": "module",
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1",
   "repository": {
     "type": "git",
     "url": "https://github.com/wiesinghilker/extension-library-backend.git"
@@ -35,22 +35,22 @@
     "@mittwald/api-client": "^4.296.0",
     "@mittwald/ext-bridge": "^0.2.0-alpha.665",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.2.2",
+    "@types/node": "^25.9.1",
     "eslint": "^9.28.0",
     "express": "^5.2.1",
-    "globals": "^17.3.0",
-    "mongodb": "^7.1.0",
-    "prettier": "^3.8.1",
+    "globals": "^17.6.0",
+    "mongodb": "^7.2.0",
+    "prettier": "^3.8.3",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.1",
-    "tsx": "^4.21.0",
+    "tsx": "^4.22.3",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0",
-    "zod": "^4.3.6"
+    "typescript-eslint": "^8.60.0",
+    "zod": "^4.4.3"
   },
   "dependencies": {
     "@mittwald/ext-bridge": "^0.2.0-alpha.665",
-    "@noble/ed25519": "^3.0.0",
+    "@noble/ed25519": "^3.1.0",
     "node-ssh": "^13.2.1",
     "pino": "^10.0.0",
     "pino-http": "^11.0.0",

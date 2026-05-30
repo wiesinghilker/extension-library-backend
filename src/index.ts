@@ -25,6 +25,10 @@ export { ExtensionInstance } from "./aggregate/extensionInstance.js";
 
 export { TempSSHConnectionV2 } from "./mittwaldAPI/TempSSHConnection.js";
 export { FileHandler } from "./mittwaldAPI/FileHandler";
+export {
+  getInstanceAccessToken,
+  type InstanceAccessToken,
+} from "./mittwaldAPI/getInstanceAccessToken.js";
 
 export { mStudioAPIHealthCheck } from "./mStudioAPIHealthCheck.js";
 
