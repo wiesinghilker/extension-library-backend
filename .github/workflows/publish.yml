@@ -17,10 +17,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 26
           registry-url: https://npm.pkg.github.com
 
-      - run: corepack enable
+      - run: npm install -g corepack && corepack enable
 
       - run: pnpm install --frozen-lockfile
 
