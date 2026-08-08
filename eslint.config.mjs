@@ -16,4 +16,10 @@ export default [
       },
     },
   },
+  {
+    // `describe`/`it` aus node:test geben Promises zurück, die der Runner
+    // selbst awaited.
+    files: ["**/*.test.ts"],
+    rules: { "@typescript-eslint/no-floating-promises": "off" },
+  },
 ];

@@ -49,3 +49,11 @@ export const stringGenerators = {
   sshHostname,
   sshUsername,
 };
+
+export {
+  escapeRegex,
+  extractMarkerBlock,
+  hasMarkerBlock,
+  removeMarkerBlock,
+  upsertMarkerBlock,
+} from "./htaccess/markerBlocks.js";
