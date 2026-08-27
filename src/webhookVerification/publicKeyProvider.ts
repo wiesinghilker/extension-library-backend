@@ -16,8 +16,9 @@ export class ApiPublicKeyProvider implements PublicKeyProvider {
   }
 
   public async getPublicKey(serial: string): Promise<string> {
-    const response =
-      await this.apiClient.marketplace.extensionGetPublicKey({ serial });
+    const response = await this.apiClient.marketplace.extensionGetPublicKey({
+      serial,
+    });
 
     if (response.status !== 200) {
       throw new Error(

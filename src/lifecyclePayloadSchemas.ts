@@ -26,19 +26,18 @@ const requestSchema = {
   }),
 };
 
-export const addedSchema = z
-  .looseObject({
-    ...apiVersionSchema,
-    ...idSchema,
-    kind: z.literal("ExtensionAddedToContext"),
-    ...contextSchema,
-    ...consentedScopesSchema,
-    ...stateSchema,
-    ...metaSchema,
-    ...secretSchema,
-    ...requestSchema,
-    ...variantKeySchema,
-  });
+export const addedSchema = z.looseObject({
+  ...apiVersionSchema,
+  ...idSchema,
+  kind: z.literal("ExtensionAddedToContext"),
+  ...contextSchema,
+  ...consentedScopesSchema,
+  ...stateSchema,
+  ...metaSchema,
+  ...secretSchema,
+  ...requestSchema,
+  ...variantKeySchema,
+});
 
 export const updatedSchema = z.looseObject({
   ...apiVersionSchema,
@@ -52,26 +51,24 @@ export const updatedSchema = z.looseObject({
   ...variantKeySchema,
 });
 
-export const secretRotatedSchema = z
-  .looseObject({
-    ...apiVersionSchema,
-    ...idSchema,
-    kind: z.literal("SecretRotated"),
-    ...contextSchema,
-    ...variantKeySchema,
-    ...secretSchema,
-    ...requestSchema,
-  });
+export const secretRotatedSchema = z.looseObject({
+  ...apiVersionSchema,
+  ...idSchema,
+  kind: z.literal("SecretRotated"),
+  ...contextSchema,
+  ...variantKeySchema,
+  ...secretSchema,
+  ...requestSchema,
+});
 
-export const removedSchema = z
-  .looseObject({
-    ...apiVersionSchema,
-    ...idSchema,
-    kind: z.literal("InstanceRemovedFromContext"),
-    ...contextSchema,
-    ...consentedScopesSchema,
-    ...stateSchema,
-    ...metaSchema,
-    ...requestSchema,
-    ...variantKeySchema,
-  });
+export const removedSchema = z.looseObject({
+  ...apiVersionSchema,
+  ...idSchema,
+  kind: z.literal("InstanceRemovedFromContext"),
+  ...contextSchema,
+  ...consentedScopesSchema,
+  ...stateSchema,
+  ...metaSchema,
+  ...requestSchema,
+  ...variantKeySchema,
+});

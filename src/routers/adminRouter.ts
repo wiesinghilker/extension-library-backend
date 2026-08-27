@@ -2,7 +2,14 @@ import express from "express";
 import { z } from "zod";
 import { logger, setLogLevel, DEFAULT_LOG_LEVEL } from "../logger.js";
 
-const validLevels = ["trace", "debug", "info", "warn", "error", "fatal"] as const;
+const validLevels = [
+  "trace",
+  "debug",
+  "info",
+  "warn",
+  "error",
+  "fatal",
+] as const;
 
 const logLevelSchema = z.object({
   level: z.enum(validLevels),

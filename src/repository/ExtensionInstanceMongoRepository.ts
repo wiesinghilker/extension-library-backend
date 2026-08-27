@@ -3,9 +3,7 @@ import { ExtensionInstanceRepository } from "./ExtensionInstanceRepository.js";
 import { ExtensionInstance } from "../aggregate/extensionInstance.js";
 import { logger } from "../logger.js";
 
-export class ExtensionInstanceMongoRepository
-  implements ExtensionInstanceRepository
-{
+export class ExtensionInstanceMongoRepository implements ExtensionInstanceRepository {
   protected collection: Collection<ExtensionInstance>;
   private readonly logger = logger.withContext({
     component: "ExtensionInstanceMongoRepository",

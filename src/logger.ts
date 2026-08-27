@@ -137,7 +137,12 @@ export const httpLogger = pinoHttp({
   autoLogging: {
     ignore: (req) => {
       const userAgent = req.headers["user-agent"] ?? "";
-      const skipPatterns = [/Uptime-Kuma/i, /Gatus/i, /HomeAssistant/i, /curl/i];
+      const skipPatterns = [
+        /Uptime-Kuma/i,
+        /Gatus/i,
+        /HomeAssistant/i,
+        /curl/i,
+      ];
       return skipPatterns.some((pattern) => pattern.test(userAgent));
     },
   },

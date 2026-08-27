@@ -24,10 +24,7 @@ const endLine = (marker: string): string =>
   `(?<=\\n)[^\\S\\n]*${escapeRegex(marker)}(?=[^\\S\\n]*\\r?(?:\\n|$))`;
 
 const blockRegex = (startMarker: string, endMarker: string): RegExp =>
-  new RegExp(
-    `${startLine(startMarker)}([\\s\\S]*?)${endLine(endMarker)}`,
-    "g",
-  );
+  new RegExp(`${startLine(startMarker)}([\\s\\S]*?)${endLine(endMarker)}`, "g");
 
 /** Ganzer Block inklusive Marker und einem folgenden Zeilenumbruch. */
 const blockWithTrailingNewlineRegex = (

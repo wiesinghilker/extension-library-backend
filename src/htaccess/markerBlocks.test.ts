@@ -70,7 +70,10 @@ describe("hasMarkerBlock / extractMarkerBlock", () => {
 </If>
 ${end}`;
     assert.equal(hasMarkerBlock(existing, start, end), true);
-    assert.match(extractMarkerBlock(existing, start, end) ?? "", /Require user alice bob/);
+    assert.match(
+      extractMarkerBlock(existing, start, end) ?? "",
+      /Require user alice bob/,
+    );
   });
 });
 
@@ -86,7 +89,10 @@ describe("removeMarkerBlock", () => {
   });
 
   it("leaves content without a block untouched", () => {
-    assert.equal(removeMarkerBlock("user\ncontent", START, END), "user\ncontent");
+    assert.equal(
+      removeMarkerBlock("user\ncontent", START, END),
+      "user\ncontent",
+    );
   });
 
   it("leaves a foreign block with shared marker prefix untouched", () => {

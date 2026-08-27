@@ -1,6 +1,11 @@
 import { MittwaldAPIV2, MittwaldAPIV2Client } from "@mittwald/api-client";
 import { NodeSSH, SSHExecCommandResponse } from "node-ssh";
-import { sshHostname, sshPassword, sshUsernameForApp, sshUsernameForContainer } from "../generators.js";
+import {
+  sshHostname,
+  sshPassword,
+  sshUsernameForApp,
+  sshUsernameForContainer,
+} from "../generators.js";
 import { logger } from "../logger.js";
 
 export enum ConnectionState {
@@ -25,21 +30,18 @@ export interface TempSSHConnectionOptionsBase {
   onReconnected?: (connection: TempSSHConnectionV2) => Promise<void> | void;
 }
 
-export interface TempSSHConnectionOptionsWithApp
-  extends TempSSHConnectionOptionsBase {
+export interface TempSSHConnectionOptionsWithApp extends TempSSHConnectionOptionsBase {
   appInstallationShortId: string;
   containerShortId?: never;
 }
 
-export interface TempSSHConnectionOptionsWithContainer
-  extends TempSSHConnectionOptionsBase {
+export interface TempSSHConnectionOptionsWithContainer extends TempSSHConnectionOptionsBase {
   containerShortId: string;
   appInstallation?: never;
 }
 
 export type TempSSHConnectionOptions =
-  | TempSSHConnectionOptionsWithApp
-  | TempSSHConnectionOptionsWithContainer;
+  TempSSHConnectionOptionsWithApp | TempSSHConnectionOptionsWithContainer;
 
 export class SSHConnectionError extends Error {
   constructor(
@@ -86,8 +88,12 @@ export class TempSSHConnectionV2 {
 
   constructor(options: TempSSHConnectionOptions) {
     this.apiClient = MittwaldAPIV2Client.newWithToken(options.apiToken);
-    this.appInstallationShortId = "appInstallationShortId" in options ? options.appInstallationShortId : undefined;
-    this.containerShortId = "containerShortId" in options ? options.containerShortId : undefined;
+    this.appInstallationShortId =
+      "appInstallationShortId" in options
+        ? options.appInstallationShortId
+        : undefined;
+    this.containerShortId =
+      "containerShortId" in options ? options.containerShortId : undefined;
     this.project = options.project;
     this.extensionName = options.extensionName;
 
@@ -253,7 +259,10 @@ export class TempSSHConnectionV2 {
     try {
       const conn = this.sshConnection;
       if (!conn) {
-        throw new SSHConnectionError("SSH connection not available", "NO_CONNECTION");
+        throw new SSHConnectionError(
+          "SSH connection not available",
+          "NO_CONNECTION",
+        );
       }
       return await conn.execCommand(command, options);
     } catch (error) {
@@ -261,7 +270,10 @@ export class TempSSHConnectionV2 {
         await this.reconnect();
         const conn = this.sshConnection;
         if (!conn) {
-          throw new SSHConnectionError("SSH connection not available after reconnect", "NO_CONNECTION");
+          throw new SSHConnectionError(
+            "SSH connection not available after reconnect",
+            "NO_CONNECTION",
+          );
         }
         return await conn.execCommand(command, options);
       }
