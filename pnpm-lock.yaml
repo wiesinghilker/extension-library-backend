@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@mittwald/ext-bridge':
-        specifier: ^0.2.0-alpha.665
-        version: 0.2.0-alpha.679(react@19.2.4)
+        specifier: ^1.0.4
+        version: 1.0.4(react@19.2.8)
       '@noble/ed25519':
         specifier: ^3.1.0
         version: 3.1.0
@@ -485,13 +485,16 @@ packages:
       '@mittwald/react-use-promise':
         optional: true
 
-  '@mittwald/ext-bridge@0.2.0-alpha.679':
-    resolution: {integrity: sha512-JAcV+89OPg25Z0tcostyXrnP/BNtQRiCPyH6M/jFZSV0bCcuOq7rEbP7bXEDQp7YWZDfHV6+V/zyIzSFrbdDdQ==}
-    engines: {node: '>=20.19'}
+  '@mittwald/ext-bridge@1.0.4':
+    resolution: {integrity: sha512-IgxsOjv2WF83fx5jDn92Yqk2NU7BFxdNeutdKIt6zjsoiGGuHWLMsBUZDKY5deohC+OO4fvLD5G00oMUeDJF/g==}
+    engines: {node: '>=24.0.0'}
     peerDependencies:
+      i18next: ^26.0.0
       react: ^19.2.0
       react-dom: ^19.2.0
     peerDependenciesMeta:
+      i18next:
+        optional: true
       react:
         optional: true
       react-dom:
@@ -801,6 +804,10 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  agent-base@6.0.2:
+    resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
+    engines: {node: '>= 6.0.0'}
+
   ajv@6.15.0:
     resolution: {integrity: sha512-fgFx7Hfoq60ytK2c7DhnF8jIvzYgOMxfugjLOSMHjLIPgenqa7S7oaagATUq99mV6IYvN2tRmC0wnTYX6iPbMw==}
 
@@ -822,6 +829,9 @@ packages:
 
   axios@1.13.5:
     resolution: {integrity: sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==}
+
+  axios@1.20.0:
+    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
   balanced-match@4.0.4:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
@@ -905,8 +915,8 @@ packages:
     resolution: {integrity: sha512-j/O/d7GcZCyNl7/hwZAb606rzqkyvaDctLmckbxLzHvFBzTJHuGEdodATcP3yIRoDrLHkIATJuvzbFlp/ki2cQ==}
     engines: {node: '>=18'}
 
-  context@3.0.33:
-    resolution: {integrity: sha512-9nBbXhHVKRFLYKk3oa7W+aHt/eiGm5aIMp4Y4IwQsiAO+deRtlJ72EA8m7Cvs3v7gjjBuqKljvt2eyihVHUJoQ==}
+  context@3.1.0:
+    resolution: {integrity: sha512-foRhGPhITOiZWqoDx9oUv0UXidbgib9wWDykR7n5pZNa7hvW8rbM/KX+yoc91PbhuiRBWdBvO2f83DUy7N27Ww==}
 
   cookie-signature@1.2.2:
     resolution: {integrity: sha512-D76uU73ulSXrD1UXF4KE2TMxVVwhsnCgfAyTg9k8P6KGZjlXKrOLe4dJQKI3Bxi5wjesZoFXJWElNWBjPZMbhg==}
@@ -1106,8 +1116,21 @@ packages:
       debug:
         optional: true
 
+  follow-redirects@1.16.0:
+    resolution: {integrity: sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
   form-data@4.0.5:
     resolution: {integrity: sha512-8RipRLol37bNs2bhoV67fiTEvdTrbMUYcFTiy3+wuuOnUog2QBHCZWXDRijWQfAkhBj2Uf5UnVaiWwA5vdd82w==}
+    engines: {node: '>= 6'}
+
+  form-data@4.0.6:
+    resolution: {integrity: sha512-vKatAh4SlVfgbv+YtmhiRjhEMJsYpsG1Y2rMQtR+SVSbytsSD1YGzDIcrAJmdFec88u/+VoGmxnl+80gL1tRCQ==}
     engines: {node: '>= 6'}
 
   forwarded@0.2.0:
@@ -1173,6 +1196,10 @@ packages:
     resolution: {integrity: sha512-4FbRdAX+bSdmo4AUFuS0WNiPz8NgFt+r8ThgNWmlrjQjt1Q7ZR9+zTlce2859x4KSXrwIsaeTqDoKQmtP8pLmQ==}
     engines: {node: '>= 0.8'}
 
+  https-proxy-agent@5.0.1:
+    resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
+    engines: {node: '>= 6'}
+
   iconv-lite@0.7.3:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
@@ -1214,8 +1241,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  jose@6.1.3:
-    resolution: {integrity: sha512-0TpaTfihd4QMNwrz/ob2Bp7X04yuxJkjRGi4aKmOqwhov54i6u79oCv7T+C7lo70MKH6BesI3vscD1yb/yzKXQ==}
+  jose@6.2.10:
+    resolution: {integrity: sha512-iiW7J9qRFlGxvCOIBDBDxFePQSn7ZMAnrYGhrrOo6siO/MIqwfyilLR27pkfDgUk+raLuzADS8A3S/KLBisc0g==}
 
   joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
@@ -1484,6 +1511,10 @@ packages:
   proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
+  proxy-from-env@2.1.0:
+    resolution: {integrity: sha512-cJ+oHTW1VAEa8cJslgmUZrc+sjRKgAKl3Zyse6+PV38hZe/V6Z14TbCuXcan9F9ghlz4QrFr2c92TNF82UkYHA==}
+    engines: {node: '>=10'}
+
   pump@3.0.4:
     resolution: {integrity: sha512-VS7sjc6KR7e1ukRFhQSY5LM2uBWAUPiOPa/A3mkKmiMwSmRFUITt0xuj+/lesgnCv+dPIEYlkzrcyXgquIHMcA==}
 
@@ -1506,8 +1537,8 @@ packages:
     resolution: {integrity: sha512-K5zQjDllxWkf7Z5xJdV0/B0WTNqx6vxG70zJE4N0kBs4LovmEYWJzQGxC9bS9RAKu3bgM40lrd5zoLJ12MQ5BA==}
     engines: {node: '>= 0.10'}
 
-  react@19.2.4:
-    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
+  react@19.2.8:
+    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
 
   readdirp@4.1.2:
@@ -1621,8 +1652,8 @@ packages:
     resolution: {integrity: sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw==}
     engines: {node: '>= 0.8'}
 
-  std-env@3.10.0:
-    resolution: {integrity: sha512-5GS12FdOZNliM5mAOxFRg7Ir0pWz8MdpYm6AY6VPkGpbA7ZzmbzNcBJQ0GPvvyWgcY7QAhCgf9Uy89I03faLkg==}
+  std-env@4.2.0:
+    resolution: {integrity: sha512-oCUKSupKTHX53EyjDtuZQ64pjLJ6yYCtpmEw0goYxtjG9KpbRe8KAsl2tBUGU9DyMcJ0RwJ8GqJAFzMXcXW1Rw==}
 
   strip-json-comments@5.0.3:
     resolution: {integrity: sha512-1tB5mhVo7U+ETBKNf92xT4hrQa3pm0MZ0PQvuDnWgAAGHDsfp4lPSpiS6psrSiet87wyGPh9ft6wmhOMQ0hDiw==}
@@ -1757,8 +1788,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vest-utils@1.3.3:
-    resolution: {integrity: sha512-9y+26YXjOpv89QmEXlFrTFLUMwUjAuwpimUVgb8HS3eNuBR3HEY68o4U/sPyGTh3OEvS7N502pX82WDm1zvsaA==}
+  vest-utils@1.5.0:
+    resolution: {integrity: sha512-nHbYeo3ZhMfttkzwrrHaU1OfJuNTrkWwme5kGDZOKhpdb8tYs8fBxhE9S7U/2uVLBLVPwNSGXul7lgopB1vSJQ==}
 
   webidl-conversions@7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
@@ -2040,29 +2071,30 @@ snapshots:
       - '@jest/globals'
       - debug
 
-  '@mittwald/ext-bridge@0.2.0-alpha.679(react@19.2.4)':
+  '@mittwald/ext-bridge@1.0.4(react@19.2.8)':
     dependencies:
-      '@mittwald/react-use-promise': 4.2.2(axios@1.13.5)(react@19.2.4)
-      axios: 1.13.5
-      jose: 6.1.3
-      std-env: 3.10.0
+      '@mittwald/react-use-promise': 4.2.2(axios@1.20.0)(react@19.2.8)
+      axios: 1.20.0
+      jose: 6.2.10
+      std-env: 4.2.0
       zod: 4.4.3
     optionalDependencies:
-      react: 19.2.4
+      react: 19.2.8
     transitivePeerDependencies:
       - debug
+      - supports-color
 
-  '@mittwald/react-use-promise@4.2.2(axios@1.13.5)(react@19.2.4)':
+  '@mittwald/react-use-promise@4.2.2(axios@1.20.0)(react@19.2.8)':
     dependencies:
       '@types/luxon': 3.7.1
       browser-or-node: 3.0.0
-      context: 3.0.33
+      context: 3.1.0
       luxon: 3.7.2
       minimatch: 10.2.6
       object-code: 1.3.4
-      react: 19.2.4
+      react: 19.2.8
     optionalDependencies:
-      axios: 1.13.5
+      axios: 1.20.0
 
   '@mongodb-js/saslprep@1.4.13':
     dependencies:
@@ -2323,6 +2355,12 @@ snapshots:
 
   acorn@8.18.0: {}
 
+  agent-base@6.0.2:
+    dependencies:
+      debug: 4.4.3
+    transitivePeerDependencies:
+      - supports-color
+
   ajv@6.15.0:
     dependencies:
       fast-deep-equal: 3.1.3
@@ -2349,6 +2387,16 @@ snapshots:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
+
+  axios@1.20.0:
+    dependencies:
+      follow-redirects: 1.16.0
+      form-data: 4.0.6
+      https-proxy-agent: 5.0.1
+      proxy-from-env: 2.1.0
+    transitivePeerDependencies:
+      - debug
+      - supports-color
 
   balanced-match@4.0.4: {}
 
@@ -2422,9 +2470,9 @@ snapshots:
 
   content-type@2.0.0: {}
 
-  context@3.0.33:
+  context@3.1.0:
     dependencies:
-      vest-utils: 1.3.3
+      vest-utils: 1.5.0
 
   cookie-signature@1.2.2: {}
 
@@ -2485,7 +2533,7 @@ snapshots:
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
       has-tostringtag: 1.0.2
-      hasown: 2.0.2
+      hasown: 2.0.4
 
   esbuild@0.27.7:
     optionalDependencies:
@@ -2697,12 +2745,22 @@ snapshots:
 
   follow-redirects@1.15.11: {}
 
+  follow-redirects@1.16.0: {}
+
   form-data@4.0.5:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       es-set-tostringtag: 2.1.0
       hasown: 2.0.2
+      mime-types: 2.1.35
+
+  form-data@4.0.6:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      es-set-tostringtag: 2.1.0
+      hasown: 2.0.4
       mime-types: 2.1.35
 
   forwarded@0.2.0: {}
@@ -2766,6 +2824,13 @@ snapshots:
       statuses: 2.0.2
       toidentifier: 1.0.1
 
+  https-proxy-agent@5.0.1:
+    dependencies:
+      agent-base: 6.0.2
+      debug: 4.4.3
+    transitivePeerDependencies:
+      - supports-color
+
   iconv-lite@0.7.3:
     dependencies:
       safer-buffer: 2.1.2
@@ -2792,7 +2857,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jose@6.1.3: {}
+  jose@6.2.10: {}
 
   joycon@3.1.1: {}
 
@@ -3024,6 +3089,8 @@ snapshots:
 
   proxy-from-env@1.1.0: {}
 
+  proxy-from-env@2.1.0: {}
+
   pump@3.0.4:
     dependencies:
       end-of-stream: 1.4.5
@@ -3047,7 +3114,7 @@ snapshots:
       iconv-lite: 0.7.3
       unpipe: 1.0.0
 
-  react@19.2.4: {}
+  react@19.2.8: {}
 
   readdirp@4.1.2: {}
 
@@ -3200,7 +3267,7 @@ snapshots:
 
   statuses@2.0.2: {}
 
-  std-env@3.10.0: {}
+  std-env@4.2.0: {}
 
   strip-json-comments@5.0.3: {}
 
@@ -3339,7 +3406,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vest-utils@1.3.3: {}
+  vest-utils@1.5.0: {}
 
   webidl-conversions@7.0.0: {}
 

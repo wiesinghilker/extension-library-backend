@@ -2,3 +2,5 @@ allowBuilds:
   cpu-features: true
   esbuild: true
   ssh2: true
+minimumReleaseAgeExclude:
+  - '@mittwald/ext-bridge@1.0.4'
