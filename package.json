@@ -48,7 +48,7 @@
     "zod": "^4.4.3"
   },
   "dependencies": {
-    "@mittwald/ext-bridge": "^1.0.6",
+    "@mittwald/ext-bridge": "^1.1.12",
     "@noble/ed25519": "^3.1.0",
     "node-ssh": "^13.2.1",
     "pino": "^10.3.1",
