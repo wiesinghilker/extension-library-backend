@@ -4,3 +4,4 @@ allowBuilds:
   ssh2: true
 minimumReleaseAgeExclude:
   - '@mittwald/ext-bridge@1.0.4 || 1.0.6'
+  - '@mittwald/ext-bridge@1.1.12'
