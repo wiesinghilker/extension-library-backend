@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@mittwald/ext-bridge':
-        specifier: ^1.1.12
-        version: 1.1.12(react@19.2.8)
+        specifier: ^1.5.1
+        version: 1.5.1(react@19.2.8)
       '@noble/ed25519':
         specifier: ^3.1.0
         version: 3.1.0
@@ -485,8 +485,8 @@ packages:
       '@mittwald/react-use-promise':
         optional: true
 
-  '@mittwald/ext-bridge@1.1.12':
-    resolution: {integrity: sha512-UWqc35xXNiebTVHUmk4EaavcpvbtcPk/LfMNHtvXocq6AshZZIb8ZteOGEHwCIeNBzzr/j16PoMNlFbgenR23w==}
+  '@mittwald/ext-bridge@1.5.1':
+    resolution: {integrity: sha512-eKoiHMlWgcKSnFXjomqNYvlP9GuY+Hy9BqGZCnDlV/q2yX7EREIgxCykrdlVDdJ0rIKEHtYA0QfB8UP8hBB0Gg==}
     engines: {node: '>=24.0.0'}
     peerDependencies:
       i18next: ^26.0.0
@@ -2050,7 +2050,7 @@ snapshots:
       - debug
       - supports-color
 
-  '@mittwald/ext-bridge@1.1.12(react@19.2.8)':
+  '@mittwald/ext-bridge@1.5.1(react@19.2.8)':
     dependencies:
       '@mittwald/react-use-promise': 4.2.2(axios@1.20.0)(react@19.2.8)
       axios: 1.20.0
