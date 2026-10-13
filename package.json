@@ -22,7 +22,8 @@
     "format": "prettier --write src/**/* eslint.config.mjs",
     "build": "tsup",
     "dev": "tsup --watch",
-    "test": "node --import tsx --test \"src/**/*.test.ts\""
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "@mittwald/api-client": "^4",

@@ -6,14 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Build
 ```bash
-yarn build       # Build the project using tsup
-yarn dev         # Watch mode for development
+pnpm build       # Build the project using tsup
+pnpm dev         # Watch mode for development
 ```
 
 ### Code Quality
 ```bash
-yarn lint        # Run ESLint with auto-fix
-yarn format      # Format code with Prettier
+pnpm lint        # Run ESLint with auto-fix
+pnpm typecheck   # Type-check with tsc (no emit)
+pnpm format      # Format code with Prettier
 ```
 
 ## Architecture Overview
